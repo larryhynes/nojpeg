@@ -1,7 +1,7 @@
 nojpeg
 ======
 
-This is the source of NoJPEG.org, a simple presentation using the superb [reveal-js](http://lab.hakim.se/reveal-js/) which aims to encourage design clients not to use JPEG for their logo artwork.
+This is the source of [NoJPEG.org](http://nojpeg.org), a simple presentation using the superb [reveal-js](http://lab.hakim.se/reveal-js/) which aims to encourage design clients not to use JPEG for their logo artwork.
 
 ## Translations
 
