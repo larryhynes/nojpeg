@@ -1,19 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="EN">
 
 	<head>
 		<meta charset="utf-8">
 
 		<title>NoJPEG</title>
 
-		<meta name="description" content="Why you don’t want to use JPEG for your logo">
+		<meta name="description" content="NoJPEG.org – Why you don’t want to use JPEG for your logo...">
 		<meta name="author" content="Larry Hynes">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="css/reveal.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/custom.css" id="theme">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
@@ -43,7 +44,7 @@
 
 				<section>
 					<h2>So we have a logo...</h2>
-					<img src="img/NoJPEG.jpg" alt="NoJPEG">
+					<img src="img/NoJPEG.jpg" width="400" height="267" alt="NoJPEG">
 					<p>And it’s a JPEG file.</p>
 					<p class="fragment">So it has a built-in white background.</p>
 					<p class="fragment">That’s not cool.</p>
@@ -51,27 +52,27 @@
 
 				<section>
 					<h2>We don’t want a white background</h2>
-					<img src="img/slide.jpg" alt="Slide">
+					<img src="img/slide.jpg" width="400" height="267" alt="Slide">
 					<p>I mean, what if we want to use our logo on a coloured background?</p>
 					<p class="fragment">Yep, we’re stuck with this white shape behind it.</p>
 				</section>
 
 				<section>
 					<h2>What happens if we use an EPS file?</h2>
-					<img src="img/slide2.jpg" height="400" width="600" alt="Slide2">
+					<img src="img/slide2.jpg" width="400" height="267" alt="Slide2">
 					<p>Ta-da! No white background.</p>
 					<p class="fragment">But wait—there’s more!</p>
 				</section>
 
 				<section>
 					<h2>What happens if we enlarge a JPEG?</h2>
-					<img src="img/pixeljpeg.jpg" height="400" width="600" alt="Pixellated JPEG">
+					<img src="img/pixeljpeg.jpg" width="400" height="267" alt="Pixellated JPEG">
 					<p>It gets all blurry and horrible!</p>
 				</section>
 
 				<section>
 					<h2>And if we enlarge an EPS file?</h2>
-					<img src="img/slide3.jpg" height="400" width="600" alt="Slide3">
+					<img src="img/slide3.jpg" width="400" height="267" alt="Slide3">
 					<p>Ta-da! We can enlarge an EPS file <i>infinitely</i> and it will remain crisp and sharp.</p>
 				</section>
 
@@ -90,7 +91,7 @@
 
 				<section>
 					<h2>Say hello to...</h2>
-					<img src="img/png.jpg" height="400" width="600" alt="PNG">
+					<img src="img/png.jpg" width="400" height="267" alt="PNG">
 					<p>PNG files. Like a JPEG, so you can open it, use it on your internal files, presentations, etc.</p>
 					<p class="fragment">And no white background – Yay!</p>
 				</section>
@@ -107,7 +108,7 @@
 				<section>
 					<h2>Don’t believe me?</h2>
 					<p>Let’s ask Twitter how they do it.</p>
-					<img src="img/twitter.png" height="469" width="742" alt="Twitter">
+					<img src="img/twitter.png" alt="Twitter">
 					<p>EPS and PNG. (And those guys are clever.)</p>
 				</section>
 
@@ -131,7 +132,6 @@
                     <p>With thanks to <a href="https://twitter.com/joffley">@joffley</a>, <a href="https://twitter.com/bjango">@bjango</a>, <a href="https://twitter.com/jescalan">@jescalan</a>, <a href="https://twitter.com/arnauvp">@arnauvp</a> and Al Haigh for feedback and suggestions.</p>
                     <p>Why not get involved at <a href="https://github.com/larryhynes/nojpeg">GitHub</a>?</p>
 				</section>
-
 			</div>
 
 		</div>
@@ -146,37 +146,28 @@
 			Reveal.initialize({
 				controls: true,
 				progress: true,
-				history: false,
+				history: true,
+				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
-					{ src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
-					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 
 		</script>
 
-<script type="text/javascript">
-  var _gauges = _gauges || [];
-  (function() {
-    var t   = document.createElement('script');
-    t.type  = 'text/javascript';
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '527be6ec108d7b384e000117');
-    t.src = '//secure.gaug.es/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-  })();
-</script>
 	</body>
 </html>

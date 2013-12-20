@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt">
+<html lang="PT">
 
 	<head>
 		<meta charset="utf-8">
@@ -12,8 +12,9 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="css/reveal.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/custom.css" id="theme">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
@@ -58,20 +59,20 @@
 
 				<section>
 					<h2>O que acontece se usarmos um arquivo EPS?</h2>
-					<img src="img/slide2.jpg" height="400" width="600" alt="Slide2">
+					<img src="img/slide2.jpg" alt="Slide2">
 					<p>Tcharaaam! Sem fundo branco.</p>
 					<p class="fragment">Mas espere, tem mais!</p>
 				</section>
 
 				<section>
 					<h2>O que acontece se aumentarmos um JPEG?</h2>
-					<img src="img/pixeljpeg.jpg" height="400" width="600" alt="Pixellated JPEG">
+					<img src="img/pixeljpeg.jpg" alt="Pixellated JPEG">
 					<p>Ele fica borrado e horrível!</p>
 				</section>
 
 				<section>
 					<h2>E se aumentarmos o arquivo EPS?</h2>
-					<img src="img/slide3.jpg" height="400" width="600" alt="Slide3">
+					<img src="img/slide3.jpg" alt="Slide3">
 					<p>Tcharaaam! Podemos aumentar o arquivo EPS <i>indefinidamente</i> e ele continuará bonito e nítido.</p>
 				</section>
 
@@ -90,7 +91,7 @@
 
 				<section>
 					<h2>Diga olá para...</h2>
-					<img src="img/png.jpg" height="400" width="600" alt="PNG">
+					<img src="img/png.jpg" alt="PNG">
 					<p>Arquivos PNG. É como um JPEG, então você pode abrir, usar nos seus arquivos internos, apresentações, etc.</p>
 					<p class="fragment">E sem fundo branco! \o/</p>
 				</section>
@@ -107,7 +108,7 @@
 				<section>
 					<h2>Não acreditam em mim?</h2>
 					<p>Vamos perguntar ao Twitter como eles fazem.</p>
-					<img src="img/twitter.png" height="469" width="742" alt="Twitter">
+					<img src="img/twitter.png" alt="Twitter">
 					<p>EPS e PNG. (E esses caras são espertos)</p>
 				</section>
 
@@ -132,7 +133,6 @@
                     <p>Traduzido para o português brasileiro por <a href="https://twitter.com/diogotux">@diogotux</a>
 					<p>Por que não se une a nós no <a href="https://github.com/larryhynes/nojpeg">GitHub</a>?</p>
 				</section>
-
 			</div>
 
 		</div>
@@ -147,37 +147,28 @@
 			Reveal.initialize({
 				controls: true,
 				progress: true,
-				history: false,
+				history: true,
+				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
-					{ src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
-					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 
 		</script>
 
-<script type="text/javascript">
-  var _gauges = _gauges || [];
-  (function() {
-    var t   = document.createElement('script');
-    t.type  = 'text/javascript';
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '527be6ec108d7b384e000117');
-    t.src = '//secure.gaug.es/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-  })();
-</script>
 	</body>
 </html>
