@@ -5,7 +5,7 @@ This is the source of [NoJPEG.org](http://nojpeg.org), a simple presentation usi
 
 ## Translations
 
-Translations are welcome. I suggest you copy `index.html`, make the required changes, add the relevant language `<meta>` tag in the `<head>` of the document and either open a pull request or email the finished page, contained in a `.ZIP` archive, to [hello@larryhynes.com](mailto:hello@larryhynes.com)
+Translations are welcome. I suggest you copy `index.html`, make the required changes, add the relevant language `<meta>` tag in the `<head>` of the document and either open a pull request or email the finished page, contained in a `.ZIP` archive, to [hello@larryhynes.com](mailto:hello@larryhynes.com) Thanks to all those who have contributed to the project.
 
 ### License
 
