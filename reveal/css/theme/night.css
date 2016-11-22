@@ -1,25 +1,26 @@
 /**
- * This is a very slightly modified Simple theme Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
- * Style changes by Larry Hynes for NoJPEG https://github.com/larryhynes/nojpeg
- * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ * Black theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900,400italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #f2f2f2;
-  background-color: #f2f2f2; }
+  background: #111;
+  background-color: #111; }
 
 .reveal {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 36px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
   font-weight: normal;
-  color: #414042; }
+  color: #eee; }
 
 ::selection {
   color: #fff;
-  background: rgba(0, 0, 0, 0.99);
+  background: #e7ad52;
   text-shadow: none; }
 
 .reveal .slides > section,
@@ -37,11 +38,11 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #EF234D;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 900;
+  color: #eee;
+  font-family: "Montserrat", Impact, sans-serif;
+  font-weight: normal;
   line-height: 1.2;
-  letter-spacing: normal;
+  letter-spacing: -0.03em;
   text-transform: none;
   text-shadow: none;
   word-wrap: break-word; }
@@ -202,20 +203,20 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #49A8E0;
+  color: #e7ad52;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #1c73a7;
+  color: #f3d7ac;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #2082bc; }
+  background: #d08a1d; }
 
 /*********************************************
  * IMAGES
@@ -223,7 +224,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #414042;
+  border: 4px solid #eee;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal section img.plain {
@@ -237,7 +238,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #49A8E0;
+  border-color: #e7ad52;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -245,31 +246,31 @@ body {
  *********************************************/
 .reveal .controls .navigate-left,
 .reveal .controls .navigate-left.enabled {
-  border-right-color: #49A8E0; }
+  border-right-color: #e7ad52; }
 
 .reveal .controls .navigate-right,
 .reveal .controls .navigate-right.enabled {
-  border-left-color: #49A8E0; }
+  border-left-color: #e7ad52; }
 
 .reveal .controls .navigate-up,
 .reveal .controls .navigate-up.enabled {
-  border-bottom-color: #49A8E0; }
+  border-bottom-color: #e7ad52; }
 
 .reveal .controls .navigate-down,
 .reveal .controls .navigate-down.enabled {
-  border-top-color: #49A8E0; }
+  border-top-color: #e7ad52; }
 
 .reveal .controls .navigate-left.enabled:hover {
-  border-right-color: #1c73a7; }
+  border-right-color: #f3d7ac; }
 
 .reveal .controls .navigate-right.enabled:hover {
-  border-left-color: #1c73a7; }
+  border-left-color: #f3d7ac; }
 
 .reveal .controls .navigate-up.enabled:hover {
-  border-bottom-color: #1c73a7; }
+  border-bottom-color: #f3d7ac; }
 
 .reveal .controls .navigate-down.enabled:hover {
-  border-top-color: #1c73a7; }
+  border-top-color: #f3d7ac; }
 
 /*********************************************
  * PROGRESS BAR
@@ -278,7 +279,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #49A8E0;
+  background: #e7ad52;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }

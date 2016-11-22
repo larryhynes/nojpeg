@@ -47,12 +47,6 @@ body {
   background-color: #fff;
   color: #000; }
 
-html:-webkit-full-screen-ancestor {
-  background-color: inherit; }
-
-html:-moz-full-screen-ancestor {
-  background-color: inherit; }
-
 /*********************************************
  * VIEW FRAGMENTS
  *********************************************/
@@ -1149,7 +1143,6 @@ html:-moz-full-screen-ancestor {
 .reveal .overlay .viewport {
   position: absolute;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   top: 40px;
