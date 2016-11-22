@@ -3,3 +3,5 @@
 log/*.log
 tmp/**
 node_modules/
+_site
+*.lock
